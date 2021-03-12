@@ -1,5 +1,16 @@
 .modal {
  background-color: #FFFFFF;
+
+ @media(min-width: $tablet-width) {
+   position: relative;
+
+   display: flex;
+   align-items: center;
+   width: 100%;
+   min-height: 100vh;
+
+   background-color: #B3B3B3;
+ }
 }
 
 .modal__wrapper {
@@ -9,6 +20,23 @@
   margin: 0 auto;
   padding: 0 16px;
   padding-top: 32px;
+  padding-bottom: 32px;
+
+  @media(min-width: $tablet-width) {
+    margin: auto;
+    margin-top: 120px;
+    margin-bottom: 164px;
+    max-width: 453px;
+    padding: 32px;
+
+    background-color: #FFFFFF;
+    border-radius: 30px;
+  }
+
+  @media(min-width: $desktop-width) {
+    max-width: 552px;
+    margin-bottom: 88px;
+  }
 }
 
 .modal__title {
@@ -19,6 +47,13 @@
   font-size: 18px;
   line-height: 24px;
   color: #000000;
+
+  @media(min-width: $tablet-width) {
+    margin-bottom: 13px;
+
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 
 .modal__close {
@@ -39,6 +74,22 @@
   &:hover path, &:focus, &:active {
     fill-opacity: 0.6;
   }
+  @media (min-width: $tablet-width) {
+    top: 19px;
+    right: 16px;
+  }
+
+  @media(min-width: $desktop-width) {
+    top: 19px;
+    right: 20px;
+  }
+}
+
+.modal__close > svg {
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .modal__description {
@@ -47,10 +98,21 @@
   font-size: 12px;
   line-height: 16px;
   color: #808080;
+
+  @media(min-width: $tablet-width) {
+    padding-right: 20px;
+
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 
 .modal__form {
   padding-top: 14px;
+
+  @media(min-width: $tablet-width) {
+    padding-top: 12px;
+  }
 }
 
 .modal__label {
@@ -83,12 +145,26 @@
 
   &--reduce {
     margin-top: 24px;
+
+    @media(min-width: $tablet-width) {
+      display: inline-block;
+
+      margin-right: 78px;
+    }
+
+    @media(min-width: $desktop-width) {
+      margin-right: 32px;
+    }
   }
 
   &--checkbox-title {
     margin: 0;
     margin-top: 16px;
     width: 150px;
+
+    @media(min-width: $tablet-width) {
+      width: 100%;
+    }
   }
 }
 
@@ -152,6 +228,10 @@
   display: inline-block;
   margin-top: 23px;
   margin-right: 10px;
+
+  @media(min-width: $tablet-width) {
+    margin-right: 15px;
+  }
 }
 
 .modal__label-for-hidden {
@@ -202,6 +282,14 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+
+  @media(min-width: $tablet-width) {
+    height: 56px;
+    margin-top: 40px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   &:hover, &:focus, &:active {
     background-color: #EA0029;
@@ -283,7 +371,7 @@
   background-image: url("../../img/checkbox-fill.png");
 }
 
-.module__checkbox-text {
+.modal__checkbox-text {
   font-family: $labGrot;
   font-weight: 400;
   font-size: 14px;
