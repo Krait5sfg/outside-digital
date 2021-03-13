@@ -2,14 +2,16 @@
  background-color: #FFFFFF;
 
  @media(min-width: $tablet-width) {
-   position: relative;
-
    display: flex;
    align-items: center;
    width: 100%;
    min-height: 100vh;
 
    background-color: #B3B3B3;
+ }
+
+ &--not-active {
+   display: none;
  }
 }
 

@@ -2,6 +2,12 @@ const MONTH_COUNT = 12;
 const TAX_DEDUCTION = 0.13;
 const MAX_SUM_TAX_DEDUCTION_LIMIT = 260000;
 const NUMBER_ENDINGS = [`ый`, `ой`, `ий`];
+export const LIMIT_NUMBER_LENGTH = 5;
+
+export const EscapeCode = {
+  STRING: `Escape`,
+  NUMBER: 27
+}
 
 export const calculateTaxDeductionForYear = (salary) => {
   return (salary * MONTH_COUNT) * TAX_DEDUCTION;
